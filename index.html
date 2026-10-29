@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10243a">
+
+  <title>Pedra, Papel e Tesoura</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="container">
+
+    <header class="cabecalho">
+      <p class="etiqueta">⚔️ ARENA DOS JOGADORES ⚔️</p>
+      <h1> PEDRA <span>PAPEL</span> <strong>TESOURA</strong></h1>
+      <p class="subtitulo">
+        Escolha sua jogada e descubra quem vence!
+      </p>
+    </header>
+
+    <section class="jogo" aria-label="Jogo de Pedra, Papel e Tesoura">
+
+      <!-- JOGADOR 1 -->
+      <article class="player" id="card-player1">
+        <div class="player-topo">
+          <span class="player-icone">1</span>
+          <div>
+            <h2>JOGADOR 1</h2>
+            <p class="status" id="status1" aria-live="polite">
+              Escolha sua jogada
+            </p>
+          </div>
+        </div>
+
+        <div class="escolhas">
+          <button class="escolha" type="button"
+            data-player="1" data-choice="pedra"
+            aria-label="Jogador 1 escolhe pedra">
+            <span class="simbolo" aria-hidden="true">🪨</span>
+            <span>PEDRA</span>
+          </button>
+
+          <button class="escolha" type="button"
+            data-player="1" data-choice="papel"
+            aria-label="Jogador 1 escolhe papel">
+            <span class="simbolo" aria-hidden="true">📜</span>
+            <span>PAPEL</span>
+          </button>
+
+          <button class="escolha" type="button"
+            data-player="1" data-choice="tesoura"
+            aria-label="Jogador 1 escolhe tesoura">
+            <span class="simbolo" aria-hidden="true">✂️</span>
+            <span>TESOURA</span>
+          </button>
+        </div>
+
+        <p class="jogada-revelada" id="reveal1">
+          Aguardando jogada...
+        </p>
+      </article>
+
+      <!-- ARENA CENTRAL -->
+      <div class="arena">
+        <div class="bloco-terra" aria-hidden="true">
+          <div class="bloco-grama"></div>
+          <span class="versus">VS</span>
+        </div>
+
+       <div class="mensagem" id="mensagem" role="status" aria-live="polite">
+  Escolham suas jogadas!
+</div>
+
+<button class="botao-ja" id="botaoJa" type="button" disabled>
+  JÁ!
+</button>
+
+<div class="contagem" id="contagem" aria-live="assertive"></div>
+
+        <p class="instrucao" id="instrucao">
+          Jogador 1 começa a partida.
+        </p>
+
+        <div class="placar">
+          <div>
+            <span>JOGADOR 1</span>
+            <strong id="pontos1">0</strong>
+          </div>
+          <span class="separador">:</span>
+          <div>
+            <span>JOGADOR 2</span>
+            <strong id="pontos2">0</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- JOGADOR 2 -->
+      <article class="player" id="card-player2">
+        <div class="player-topo">
+          <span class="player-icone">2</span>
+          <div>
+            <h2>JOGADOR 2</h2>
+            <p class="status" id="status2" aria-live="polite">
+              Escolha sua jogada
+            </p>
+          </div>
+        </div>
+
+        <div class="escolhas">
+          <button class="escolha" type="button"
+            data-player="2" data-choice="pedra"
+            aria-label="Jogador 2 escolhe pedra">
+            <span class="simbolo" aria-hidden="true">🪨</span>
+            <span>PEDRA</span>
+          </button>
+
+          <button class="escolha" type="button"
+            data-player="2" data-choice="papel"
+            aria-label="Jogador 2 escolhe papel">
+            <span class="simbolo" aria-hidden="true">📜</span>
+            <span>PAPEL</span>
+          </button>
+
+          <button class="escolha" type="button"
+            data-player="2" data-choice="tesoura"
+            aria-label="Jogador 2 escolhe tesoura">
+            <span class="simbolo" aria-hidden="true">✂️</span>
+            <span>TESOURA</span>
+          </button>
+        </div>
+
+        <p class="jogada-revelada" id="reveal2">
+          Aguardando jogada...
+        </p>
+      </article>
+
+    </section>
+
+    <footer class="rodape">
+      <button class="botao-reset" id="reiniciar" type="button">
+        ↻ REINICIAR PARTIDA
+      </button>
+      <p>QUE VENÇA O MELHOR!</p>
+    </footer>
+
+  </main>
+</body>
+</html>
